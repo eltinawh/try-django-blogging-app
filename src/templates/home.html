@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+{{ title }}
+{{ request.user }}
+{{ request.path }}
+{{ user }}
+
+<!-- {% if user.is_authenticated %}
+<h1>User only data</h1>
+  {% for item in my_fav_foods %}
+    <li>{{ item }}</li>
+  {% endfor %}
+{% endif %} -->
+
+{% for item in my_fav_foods %}
+<li>{{ item }}</li>
+{% endfor %}
+
+{% endblock %}
